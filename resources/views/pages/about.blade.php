@@ -1,4 +1,4 @@
-@extends("app")
+@extends("layouts.app")
 
 <!-- simple content -->
 @section('title', config("app.name").' | about')
