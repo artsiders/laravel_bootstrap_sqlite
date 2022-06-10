@@ -13,10 +13,10 @@
     
     <br/>
     @if (Route::is('app_home'))
-        <img src="/images/cameroon.png" alt="cameroon finger print" />
+        <img src="{{ asset('/images/cameroon.png') }}" alt="cameroon finger print" />
     @endif
     @if (Route::is('app_about'))
-        <img src="/images/profile.jpg" alt="profile"/>
+        <img src="{{ asset('/images/profile.jpg') }}" alt="profile"/>
     @endif
 
     <footer>
