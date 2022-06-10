@@ -3,7 +3,7 @@
 @section('content')
     <h1>home page</h1>
     hello world !
-    <a href="/about">a propos</a>
+    <a href="{{route('app_about')}}">a propos</a>
 @endsection
 
     

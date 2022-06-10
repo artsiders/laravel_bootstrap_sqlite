@@ -15,6 +15,8 @@
         {{ env('APP_NAME') }}
         
         &copy; coryright {{ date('d M Y H:i:s') }} &#127817;
+        <br>
+        <a href="{{route('app_welcome')}}">start page laravel</a>
     </footer>
 </body>
 </html>

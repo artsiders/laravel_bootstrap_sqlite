@@ -7,7 +7,7 @@
 @section('content')
     <h1>salim</h1>
     hello world !
-    <a href="/">home page</a>
+    <a href="{{route('app_home')}}">home page</a>
 @endsection
 
 </body>
