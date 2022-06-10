@@ -8,16 +8,9 @@
     <title>@yield("title", config("app.name"))</title>
 </head>
 <body>
-    @yield("content")
-    @yield("footer")
-    
-    <br/>
-    @if (Route::is('app_home'))
-        <img src="{{ asset('/images/cameroon.png') }}" alt="cameroon finger print" />
-    @endif
-    @if (Route::is('app_about'))
-        <img src="{{ asset('/images/profile.jpg') }}" alt="profile"/>
-    @endif
+    <main role="main">
+        @yield("content")
+    </main>
 
     <footer>
         {{-- faire appel a une variable d'environement de .env --}}

@@ -6,7 +6,9 @@
 
 @section('content')
     <h1>A propos de salim</h1>
-    hello world !
+    image de profil
+    <br />
+    <img src="{{ asset('/images/profile.jpg') }}" alt="profile"/>
 @endsection
 
 </body>

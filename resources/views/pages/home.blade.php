@@ -2,7 +2,9 @@
 
 @section('content')
     <h1>home page</h1>
-    hello world !
+    le drapeau du cameroun
+    <br />
+    <img src="{{ asset('/images/cameroon.png') }}" alt="cameroon finger print" />
 @endsection
 
     
