@@ -10,8 +10,14 @@
 <body>
     @yield("content")
     @yield("footer")
-
-
+    
+    <br/>
+    @if (Route::is('app_home'))
+        <img src="/images/cameroon.png" alt="cameroon finger print" />
+    @endif
+    @if (Route::is('app_about'))
+        <img src="/images/profile.jpg" alt="profile"/>
+    @endif
 
     <footer>
         {{-- faire appel a une variable d'environement de .env --}}
