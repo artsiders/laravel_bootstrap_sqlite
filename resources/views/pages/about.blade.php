@@ -5,9 +5,8 @@
     
 
 @section('content')
-    <h1>salim</h1>
+    <h1>A propos de salim</h1>
     hello world !
-    <a href="{{route('app_home')}}">home page</a>
 @endsection
 
 </body>
