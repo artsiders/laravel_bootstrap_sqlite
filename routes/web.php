@@ -17,10 +17,8 @@ Route::get('/', function () {
     return view('pages/home');
 })->name('app_home');
 
-Route::get('/about', function () {
-    return view('pages/about');
-})->name('app_about');
+// les fonction fleché en php
+Route::get('/about', fn() => view('pages/about'))->name('app_about');
 
-Route::get('/welcome', function () {
-    return view('pages/welcome');
-})->name('app_welcome');
+// route simplifié avec laravel
+Route::view('/welcome', 'pages/welcome')->name('app_welcome');
