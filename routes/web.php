@@ -35,4 +35,7 @@ Route::view('/welcome', 'pages/welcome')->name('app_welcome');
 
 
 Route::get('/city', [cityController::class, 'index'])->name('app_city');
+
+
 Route::get('/etudiant', [etudiantController::class, 'index'])->name('app_etudiant');
+Route::get('/etudiant/create', [etudiantController::class, 'create'])->name('app_etudiant.create');

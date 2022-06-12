@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex justify-content-end">
-  <button class="btn btn-outline-primary mt-3">ajouter un etudiant</button>
+  <a class="btn btn-outline-primary mt-3" href="{{ route('app_etudiant.create') }}">ajouter un etudiant</a>
 </div>
 <table class="table table-bordered mt-2">
     <thead class="thead-dark bg-dark text-light">
