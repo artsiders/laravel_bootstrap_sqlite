@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\cityController;
+use App\Http\Controllers\etudiantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,4 @@ Route::view('/welcome', 'pages/welcome')->name('app_welcome');
 
 
 Route::get('/city', [cityController::class, 'index'])->name('app_city');
+Route::get('/etudiant', [etudiantController::class, 'index'])->name('app_etudiant');
