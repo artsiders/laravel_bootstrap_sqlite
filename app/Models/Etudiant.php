@@ -11,6 +11,6 @@ class Etudiant extends Model
     
     public function classe()
     {
-        return $this->hasOne(Classe::class);
+        return $this->belongsTo(Classe::class);
     }
 }

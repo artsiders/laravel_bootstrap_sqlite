@@ -1,22 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<table class="table table-bordered">
-    <thead class="thead-dark">
+<div class="d-flex justify-content-end">
+  <button class="btn btn-outline-primary mt-3">ajouter un etudiant</button>
+</div>
+<table class="table table-bordered mt-2">
+    <thead class="thead-dark bg-dark text-light">
       <tr>
         <th scope="col">#</th>
         <th scope="col">nom</th>
         <th scope="col">prenom</th>
         <th scope="col">classe</th>
+        <th scope="col">action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
+      @foreach ($etudiants as $etudiant)
+        <tr>
+          <th scope="row">{{ $loop->index + 1 }}</th>
+          <td>{{ $etudiant->nom }}</td>
+          <td>{{ $etudiant->prenom }}</td>
+          <td>{{ $etudiant->classe->libelle }}</td>
+          <td>
+            <button class="btn btn-outline-success">editer</button>
+            <button class="btn btn-outline-danger">supprimer</button>
+          </td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
+  {{ $etudiants->links() }}
 @endsection
