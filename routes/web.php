@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\cityController;
 use App\Http\Controllers\etudiantController;
+use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// il ne faut pas mettre de traitement dans le fichier web.php
-// ici c'est juste pour le test
-Route::get('/', function () {
-    //on fait des traitement et ensuite on renvoi les valeur avec compact
-    if(isset($_GET) and !empty($_GET)) {
-        $name = $_GET['name'];
-    } else {
-        $name = "salim";
-    }
-    return view('pages/home', compact('name'));
-    // om peut aussi renvoyer un tableau associative
-})->name('app_home');
+
+Route::get('/', [homeController::class, 'index'])->name('app_home');
 
 // les fonction fleché en php
 Route::get('/about', fn() => view('pages/about'))->name('app_about');
