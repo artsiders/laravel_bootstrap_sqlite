@@ -1,11 +1,11 @@
 @extends("layouts.app")
 
 @section('content')
-<section class="py-5 text-center container">
+<section class="text-center container-fluid cover-section">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">laravel bootstrap</h1>
-            <p class="lead text-muted">je revoi un peut laravel et j'en profite pour me familiarisé avec bootstrap 😁
+            <h1 class="fw-light">Laravel | Bootstrap | Sqlite</h1>
+            <p class="lead text-light">je revoi un peut laravel et j'en profite pour me familiarisé avec bootstrap  et sqlite 😁
             </p>
             <p>
                 <a href="https://youtube.com/c/artsider99" target="_blanc" class="btn btn-danger mx-3 my-2">art sider

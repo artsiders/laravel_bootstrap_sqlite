@@ -28,7 +28,7 @@
     <header>
         @include('layouts.partials._navigation')
     </header>
-    <main class="container mt-5" role="main">
+    <main class="mt-4" role="main">
         @yield("content")
     </main>
 

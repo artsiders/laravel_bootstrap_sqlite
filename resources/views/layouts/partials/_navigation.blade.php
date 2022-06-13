@@ -1,5 +1,5 @@
 <nav>
-    <div class="nav nav-tabs bg-warning fixed-top" role="tablist">
+    <div class="nav nav-tabs bg-light fixed-top" role="tablist">
         <a 
             class="nav-item nav-link @if (Route::is("app_home")) active @endif" 
             data-toggle="tab" 
