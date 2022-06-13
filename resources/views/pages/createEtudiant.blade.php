@@ -1,25 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container pt-5">
     <h2 class="text-center mt-2">ajouter un etudiant</h2>
-    <form 
-        class='mt-2 bg-dark text-light border border-primary p-4 rounded' 
-        method="POST" 
-        action="{{ route('app_etudiant.ajouter') }}"
-    >
+    <form class='mt-2 bg-dark text-light border border-primary p-4 rounded' method="POST"
+        action="{{ route('app_etudiant.ajouter') }}">
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                    <li>{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
         @endif
-        @if (isset($success))
+        @if (session()->has('success'))
         <div class="alert alert-success">
             <ul>
-                <li>{{ $success }}</li>
+                <li>{{ session()->get('success') }}</li>
             </ul>
         </div>
         @endif
@@ -37,13 +35,14 @@
             <label for="">classe</label>
             <select class="form-control" name="classe_id">
                 @foreach ($classes as $classe)
-                    <option value="{{ $classe->id }}">{{ $classe->libelle }}</option>
+                <option value="{{ $classe->id }}">{{ $classe->libelle }}</option>
                 @endforeach
             </select>
         </div>
         <div class="form-group mt-4">
-            <button type="submit" class="btn btn-primary">enregistrer</button> 
-            <a href="{{ route('app_etudiant') }}" class="btn btn-danger">annuler</a> 
+            <button type="submit" class="btn btn-primary">enregistrer</button>
+            <a href="{{ route('app_etudiant') }}" class="btn btn-outline-light">retouner a la liste d'etudiants</a>
         </div>
-  </form>
+    </form>
+</div>
 @endsection
