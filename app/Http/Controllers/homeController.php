@@ -9,7 +9,7 @@ class homeController extends Controller
 {
     public function index() {
         // $etudiants = Etudiant::orderBy('nom', 'asc')->get();
-        $etudiants = Etudiant::orderBy('nom', 'asc')->paginate(5);
+        $etudiants = Etudiant::orderBy('nom', 'asc')->paginate(6);
         return view('pages.home', compact('etudiants'));
     }
 }

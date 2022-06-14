@@ -31,4 +31,4 @@ Route::get('/city', [cityController::class, 'index'])->name('app_city');
 Route::get('/etudiant', [etudiantController::class, 'index'])->name('app_etudiant');
 Route::get('/etudiant/create', [etudiantController::class, 'create'])->name('app_etudiant.create');
 
-Route::post('/etudiant/create', [etudiantController::class, 'ajouter'])->name('app_etudiant.ajouter');
+Route::post('/etudiant/create', [etudiantController::class, 'store'])->name('app_etudiant.ajouter');

@@ -19,7 +19,7 @@ class etudiantController extends Controller
         return view('pages.createEtudiant', compact('classes'));
     }
 
-    public function ajouter(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             "nom" => "required",
@@ -37,5 +37,20 @@ class etudiantController extends Controller
         // ]);
 
         return back()->with("success", "etudiant ajouter avec succè !");
+    }
+
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param \App\Models\Etudiant $client
+     * @return \Illuminate\Http\Response
+    */
+    public function destroy(Etudiant $etudiant)
+    {
+        $etudiant->delete();
+        
+        return redirect()->route('clients.index')
+        ->with('success','etudiant supprimé avec succès');
     }
 }
